@@ -11,6 +11,8 @@ let feature=document.querySelector(".feature")
 let cate=document.querySelector(".cate")
 let cardcontainer=document.querySelector(".carcontainer")
 let empty=document.querySelector(".empty")
+let disp=document.querySelector(".disp")
+let mainpage=document.querySelector(".mainpage")
 let cartcount = 0;
 
 // sidebar
@@ -147,11 +149,29 @@ for (const btn of arr) {
     
 //     havecommonpart(value,intext)
 //    })
-// })
+// })           
 
 // search by its own
 sin.addEventListener("input",()=>{
     // feature.querySelector("h3").remove()
+     function loa(){
+     const mediaquer=window.matchMedia("(max-width:950px)")
+    if(mediaquer.matches){
+        console.log("is it working")
+       if(sin.value==""){
+         disp.classList.remove("active")
+    }else{
+        mainpage.style.height="auto"
+        disp.classList.add("active")
+    }
+
+    }
+ }
+//  window.addEventListener("resize",()=>{
+//     loa()
+// })
+     loa();
+   
     cardcontainer.innerHTML=''
     
     let value=input.value

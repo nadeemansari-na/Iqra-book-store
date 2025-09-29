@@ -232,6 +232,9 @@ body{
     background-image: url("817pXLh+9gL._SY466_.jpg");
     background-size: cover;
 }
+.active{
+    display: none;
+}
 
 /* category */
 .cate{
@@ -561,7 +564,7 @@ body{
     }
 
     .mainpage{
-        margin-top: 2rem;
+        margin-top: 4rem;
         height: 60vh;
     }
 }
