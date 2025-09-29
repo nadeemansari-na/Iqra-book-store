@@ -510,7 +510,7 @@ body{
         height: 21rem;
     }
     .mainpage{
-        margin-top: 7rem;
+        margin-top: 4rem;
     }
 }
 @media (max-width:650px){
@@ -559,7 +559,9 @@ body{
          width: 13rem;
         height: 21rem;
     }
+
     .mainpage{
+        margin-top: 2rem;
         height: 60vh;
     }
 }
