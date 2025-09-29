@@ -509,10 +509,13 @@ body{
         width: 13rem;
         height: 21rem;
     }
+    .mainpage{
+        margin-top: 7rem;
+    }
 }
 @media (max-width:650px){
     .mainpage{
-        margin: 2rem 0 2rem 0;
+        /* margin: 2rem 0 2rem 0; */
         gap: 5rem;
     }
     
@@ -549,5 +552,14 @@ body{
 @media (max-width:370px){
     .disp{
         width: 11.4rem;
+    }
+}
+@media (max-width:950px ) and (min-width:825px){
+    .disp{
+         width: 13rem;
+        height: 21rem;
+    }
+    .mainpage{
+        height: 60vh;
     }
 }
