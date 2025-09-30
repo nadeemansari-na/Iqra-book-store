@@ -49,16 +49,15 @@ close.addEventListener("click", (e) => {
     else{
         order.style.right='-25%'
     }
-    // order.classList.add("active")
 })
 
 // ordercart
 let sum = 0;
-function mainl(amount, tittle) {
+function mainl(amount, tittle ,url) {
     let head = document.querySelector("header")
     let div = document.createElement("div")
     div.classList.add("ormassage")
-    div.innerHTML = ` <img width="42rem" height="52rem" src="Best_Seller_-_Love_Mercy_book_cover.webp" alt="">
+    div.innerHTML = ` <img width="42rem" height="52rem" src="${url}" alt="">
             <div class="name">
                 <p>${tittle}</p>
                 <span>₹${amount.slice(3)}</span>
@@ -109,6 +108,8 @@ for (const btn of arr) {
         let empty=document.querySelector(".empty")
         console.log('button clicked:', btn)
         let parent = btn.parentElement
+        let ttl=parent.childNodes[1]
+        let url=window.getComputedStyle(ttl).backgroundImage.slice(5,-2).split("/")[4]
         let span = parent.querySelector("span")
         let name = parent.querySelector("p")
         let amount = span.innerText;
@@ -116,40 +117,12 @@ for (const btn of arr) {
         alert(`${tittle} added to cart!`)
         cartcount++
         document.querySelector("#cart-count").textContent = cartcount
-        mainl(amount, tittle)
+        mainl(amount, tittle , url)
         empty.remove()
     })
 }
 
-// searchproduct serach by button
-// search.addEventListener("click",()=>{
-//     cardcontainer.innerHTML=''
-    
-//     let value=input.value
-//    heading.forEach((v)=>{
-//     let intext=v.innerText;
-    
-//     function havecommonpart(str1,str2){
-//         let words1=str1.toLowerCase().split(/\s+/);
-//         let words2=str2.toLowerCase().split(/\s+/);
-//         let check = words1.some(w1=> words2.some(w2 => w1.includes(w2) || w2.includes(w1)))
-//         if(check==true){
-//            function gebit(text){
-//             return Array.from(heading).filter(el => el.innerText.includes(text))
-//             .map(el => el.parentElement)
-//            }
-//            let els=gebit(str2)
-//            console.log(els[0])
-//            let apply=els[0]
-//            cate.remove()
-           
-//            cardcontainer.append(apply)
-//         }
-//     }
-    
-//     havecommonpart(value,intext)
-//    })
-// })           
+         
 
 // search by its own
 sin.addEventListener("input",()=>{
@@ -167,9 +140,6 @@ sin.addEventListener("input",()=>{
 
     }
  }
-//  window.addEventListener("resize",()=>{
-//     loa()
-// })
      loa();
    
     cardcontainer.innerHTML=''

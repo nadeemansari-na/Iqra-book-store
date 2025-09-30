@@ -94,8 +94,9 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    position: sticky;
+    /* position: sticky; */
     position: fixed;
+    z-index: 1000;
 }
 .lib{
     display: flex;
@@ -308,6 +309,8 @@ body{
     gap: 20px;
 }
 .card{
+    position: relative;
+    
     background-color: rgb(215, 219, 221);
     width: 12rem;
     height: 17rem;
@@ -521,7 +524,10 @@ body{
         /* margin: 2rem 0 2rem 0; */
         gap: 5rem;
     }
-    
+    .search input{
+        padding: 6px 2px 5px 2px;
+        font-size: 14px;
+    }
     .welcome h1{
         font-size: 1.5rem;
     }
@@ -543,7 +549,7 @@ body{
         width: 100%;
     }
 }
-@media (max-width:400px ) and (min-width:359px) {
+@media (max-width:400px ) and (min-width:339px) {
     .mainpage{
         margin: 6rem 0 2rem 0;
     }
@@ -566,5 +572,19 @@ body{
     .mainpage{
         margin-top: 4rem;
         height: 60vh;
+    }
+}
+@media (max-width:450px ){
+    .search input{
+        padding: 8px 2px 8px 7px;
+        font-size: 11px;
+    }
+    .feature{
+        padding: 0 6rem;
+    }
+}
+@media (max-width:350px){
+    .search input{
+        padding: 8px 2px 8px 2px;
     }
 }
