@@ -57,10 +57,11 @@ function mainl(amount, tittle ,url) {
     let head = document.querySelector("header")
     let div = document.createElement("div")
     div.classList.add("ormassage")
-    div.innerHTML = ` <img width="42rem" height="52rem" src="${url}" alt="">
+    div.innerHTML = `<div class="sequ"> <img width="42rem" height="52rem" src="${url}" alt="">
             <div class="name">
                 <p>${tittle}</p>
                 <span>₹${amount.slice(3)}</span>
+            </div> 
             </div>
             <div class="close"><i class="fa-solid fa-xmark"></i></div>
     

@@ -58,6 +58,10 @@ body{
 .ormassage:hover{
     background-color: #ebebf1;
 }
+.sequ{
+    display: flex;
+    gap: 20px;
+}
 .oimg{
     width: 2rem;
     height: 2rem;
@@ -549,13 +553,22 @@ body{
         width: 100%;
     }
 }
-@media (max-width:400px ) and (min-width:339px) {
+@media (max-width:376px ) and (min-width:339px) {
     .mainpage{
         margin: 6rem 0 2rem 0;
     }
      .disp{
         width: 10.4rem;
         height: 18rem;
+    }
+}
+@media (max-width:401px ) and (min-width:376px){
+      .disp{
+        width: 11.4rem;
+        height: 18rem;
+    }
+     .mainpage{
+        margin: 6rem 0 2rem 0;
     }
 }
 @media (max-width:370px){
@@ -586,5 +599,11 @@ body{
 @media (max-width:350px){
     .search input{
         padding: 8px 2px 8px 2px;
+    }
+}
+
+@media (max-width:1717px) and (min-width:951px){
+    .disp{
+        width:16rem ;
     }
 }
