@@ -161,7 +161,7 @@ sin.addEventListener("input",()=>{
            let els=gebit(str2)
            console.log(els[0])
            let apply=els[0]
-           cate.remove()
+        //    cate.remove()
            
            cardcontainer.append(apply)
         }
